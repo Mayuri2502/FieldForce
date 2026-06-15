@@ -1,15 +1,9 @@
-FROM node:18-alpine
+FROM node:18
 
 WORKDIR /app
 
-# Install build dependencies for native modules
-RUN apk add --no-cache python3 make g++
-
 COPY backend/package*.json ./
 RUN npm ci --only=production
-
-# Rebuild sqlite3 for Alpine
-RUN npm rebuild sqlite3
 
 COPY backend/ ./
 
