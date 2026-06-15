@@ -8,5 +8,4 @@ coverage/
 frontend/node_modules/
 backend/node_modules/
 
-*.log
-.vercel
+*.loggit remote add origin https://github.com/Mayuri2502/FieldForce.git
