@@ -15,6 +15,9 @@ if (missingEnvVars.length > 0) {
 const dbPath = process.env.DB_PATH || path.join(process.cwd(), 'database.sqlite');
 logger.info('[DATABASE CONFIG] Database path:', dbPath);
 logger.info('[DATABASE CONFIG] Current working directory:', process.cwd());
+logger.info('[DATABASE CONFIG] DATABASE_URL available:', !!process.env.DATABASE_URL);
+logger.info('[DATABASE CONFIG] DB_DIALECT:', process.env.DB_DIALECT);
+logger.info('[DATABASE CONFIG] DB_HOST:', process.env.DB_HOST);
 
 // Use DATABASE_URL if available (Railway, Heroku, etc.)
 const databaseUrl = process.env.DATABASE_URL;
