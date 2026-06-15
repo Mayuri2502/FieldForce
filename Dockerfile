@@ -12,4 +12,4 @@ RUN mkdir -p /app/data
 
 EXPOSE 5000
 
-CMD ["node", src/server.js"]
+CMD ["node", "src/server.js"]
